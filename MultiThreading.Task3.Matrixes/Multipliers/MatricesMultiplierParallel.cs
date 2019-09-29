@@ -13,10 +13,10 @@ namespace MultiThreading.Task3.MatrixMultiplier.Multipliers
                                                                        // to use parallel loop in cases like this. :)
             Parallel.For(0, m1.RowCount, i =>
             {
-                for (byte j = 0; j < m2.ColCount; j++)
+                for (long j = 0; j < m2.ColCount; j++)
                 {
                     long sum = 0;
-                    for (byte k = 0; k < m1.ColCount; k++)
+                    for (long k = 0; k < m1.ColCount; k++)
                     {
                         sum += m1.GetElement(i, k) * m2.GetElement(k, j);
                     }

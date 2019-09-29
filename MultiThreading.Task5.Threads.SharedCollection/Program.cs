@@ -22,40 +22,9 @@ namespace MultiThreading.Task5.Threads.SharedCollection
             Console.WriteLine();
 
             // feel free to add your code
-            var list = new List<int>(10);
-
-            var task = Task.Factory.StartNew(() => AddItem(list));
-
-            task.Wait();
+            new CollectionWorker().Run();
 
             Console.ReadLine();
-        }
-
-        private static void AddItem(List<int> list)
-        {
-            for (var i = 0; i < 10; i++)
-            {
-                sem.WaitOne();
-
-                Console.WriteLine("Added element");
-                list.Add(i);
-                sem.Release();
-
-                var task = Task.Factory.StartNew(() => PrintCollection(list));
-                // task.Wait();  // if we use wait for this task we will can do add and print methods without any sync objects ;d
-            }
-        }
-
-        private static void PrintCollection(List<int> list)
-        {
-
-            sem.WaitOne();
-            Console.WriteLine("New print:");
-            foreach (var item in list)
-            {
-                Console.WriteLine(item);
-            }
-            sem.Release();
         }
     }
 }
