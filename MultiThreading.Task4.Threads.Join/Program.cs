@@ -16,8 +16,6 @@ namespace MultiThreading.Task4.Threads.Join
 {
     class Program
     {
-        static Semaphore sem = new Semaphore(2, 4);
-
         static void Main(string[] args)
         {
             Console.WriteLine("4.	Write a program which recursively creates 10 threads.");

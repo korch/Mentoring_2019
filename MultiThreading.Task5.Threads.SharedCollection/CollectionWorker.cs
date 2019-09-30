@@ -8,16 +8,16 @@ namespace MultiThreading.Task5.Threads.SharedCollection
 {
     internal class CollectionWorker
     {
-        private Semaphore _sem = new Semaphore(1, 1); // hell yeah, this is a good case to use Semaphore, 
-                                                     //at least I think so! We can create a corridore only for one thread per time xd
-
+      
+        private AutoResetEvent auto = new AutoResetEvent(false);
+   
         private List<int> _list;
 
         public void Run()
         {
             _list = new List<int>(10);
 
-            var task = Task.Factory.StartNew(() => AddItem());
+            var task = Task.Factory.StartNew(AddItem);
 
             task.Wait();
         }
@@ -26,27 +26,32 @@ namespace MultiThreading.Task5.Threads.SharedCollection
         {
             for (var i = 0; i < 10; i++)
             {
-                _sem.WaitOne();
+                Task.Factory.StartNew(PrintCollection);
 
-                Console.WriteLine("Added element");
-                _list.Add(i);
-                _sem.Release();
-
-                var task = Task.Factory.StartNew(() => PrintCollection());
-                // task.Wait();  // if we use wait for this task we will can do add and print methods without any sync objects ;d
+                lock (_list)
+                {
+                  
+                    _list.Add(i);
+                    Console.WriteLine("Added element");
+                }  
+                auto.Set(); //signal for threads that they can run 
             }
+
+            auto.Close();
+            
         }
 
         private void PrintCollection()
         {
-
-            _sem.WaitOne();
+            auto.WaitOne(); // wait a signal from another thread
             Console.WriteLine("New print:");
-            foreach (var item in _list)
+            lock (_list)
             {
-                Console.WriteLine(item);
-            }
-            _sem.Release();
+                foreach (var item in _list)
+                {
+                    Console.WriteLine(item);
+                }
+            } 
         }
     }
 }

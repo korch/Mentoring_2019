@@ -31,3 +31,14 @@ F:\Work\Mentoring2019\Multithreading\Mentoring_2019\MultiThreading.Task5.Threads
 F:\Work\Mentoring2019\Multithreading\Mentoring_2019\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.AssemblyInfo.cs
 F:\Work\Mentoring2019\Multithreading\Mentoring_2019\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.dll
 F:\Work\Mentoring2019\Multithreading\Mentoring_2019\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.pdb
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task5.Threads.SharedCollection\bin\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.deps.json
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task5.Threads.SharedCollection\bin\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.runtimeconfig.json
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task5.Threads.SharedCollection\bin\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.runtimeconfig.dev.json
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task5.Threads.SharedCollection\bin\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.dll
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task5.Threads.SharedCollection\bin\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.pdb
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.csprojAssemblyReference.cache
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.csproj.CoreCompileInputs.cache
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.AssemblyInfoInputs.cache
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.AssemblyInfo.cs
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.dll
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task5.Threads.SharedCollection\obj\Debug\netcoreapp2.1\MultiThreading.Task5.Threads.SharedCollection.pdb

@@ -11,19 +11,17 @@ namespace MultiThreading.Task3.MatrixMultiplier.Multipliers
                                                                        //and how it works if I set parallel loop for others
                                                                        // iterations (loop by columns etc.) I'm checking any information about it to understand difference and what a best way
                                                                        // to use parallel loop in cases like this. :)
-            Parallel.For(0, m1.RowCount, i =>
+                                                               
+
+            for (long i = 0; i < m1.RowCount; i++)
             {
                 for (long j = 0; j < m2.ColCount; j++)
                 {
                     long sum = 0;
-                    for (long k = 0; k < m1.ColCount; k++)
-                    {
-                        sum += m1.GetElement(i, k) * m2.GetElement(k, j);
-                    }
-
+                    Parallel.For(0, m1.ColCount, k => { sum += m1.GetElement(i, k) * m2.GetElement(k, j); });
                     resultMatrix.SetElement(i, j, sum);
                 }
-            });
+            };
 
             return resultMatrix;
         }

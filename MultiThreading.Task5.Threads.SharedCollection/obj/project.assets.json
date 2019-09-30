@@ -688,24 +688,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fromt\\.nuget\\packages\\": {},
+    "C:\\Users\\Yahor_Sabaleuski\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Work\\Mentoring2019\\Multithreading\\Mentoring_2019\\MultiThreading.Task5.Threads.SharedCollection\\MultiThreading.Task5.Threads.SharedCollection.csproj",
+      "projectUniqueName": "D:\\Mentoring2019\\Mentoring_2019\\MultiThreading.Task5.Threads.SharedCollection\\MultiThreading.Task5.Threads.SharedCollection.csproj",
       "projectName": "MultiThreading.Task5.Threads.SharedCollection",
-      "projectPath": "F:\\Work\\Mentoring2019\\Multithreading\\Mentoring_2019\\MultiThreading.Task5.Threads.SharedCollection\\MultiThreading.Task5.Threads.SharedCollection.csproj",
-      "packagesPath": "C:\\Users\\fromt\\.nuget\\packages\\",
-      "outputPath": "F:\\Work\\Mentoring2019\\Multithreading\\Mentoring_2019\\MultiThreading.Task5.Threads.SharedCollection\\obj\\",
+      "projectPath": "D:\\Mentoring2019\\Mentoring_2019\\MultiThreading.Task5.Threads.SharedCollection\\MultiThreading.Task5.Threads.SharedCollection.csproj",
+      "packagesPath": "C:\\Users\\Yahor_Sabaleuski\\.nuget\\packages\\",
+      "outputPath": "D:\\Mentoring2019\\Mentoring_2019\\MultiThreading.Task5.Threads.SharedCollection\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\fromt\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Yahor_Sabaleuski\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"

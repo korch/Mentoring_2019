@@ -13,7 +13,6 @@ namespace MultiThreading.Task5.Threads.SharedCollection
 {
     class Program
     {
-        static Semaphore sem = new Semaphore(1, 1); // hell yeah, this is a good case to use Semaphore, at least I think so! We can create a corridore only for one thread per time xd
         static void Main(string[] args)
         {
             Console.WriteLine("5. Write a program which creates two threads and a shared collection:");

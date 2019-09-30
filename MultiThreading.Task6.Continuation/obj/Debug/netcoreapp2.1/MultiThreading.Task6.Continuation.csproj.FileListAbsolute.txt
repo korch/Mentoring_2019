@@ -30,3 +30,14 @@ F:\Work\Mentoring2019\Multithreading\Mentoring_2019\MultiThreading.Task6.Continu
 F:\Work\Mentoring2019\Multithreading\Mentoring_2019\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.AssemblyInfo.cs
 F:\Work\Mentoring2019\Multithreading\Mentoring_2019\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.dll
 F:\Work\Mentoring2019\Multithreading\Mentoring_2019\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.pdb
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task6.Continuation\bin\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.deps.json
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task6.Continuation\bin\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.runtimeconfig.json
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task6.Continuation\bin\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.runtimeconfig.dev.json
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task6.Continuation\bin\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.dll
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task6.Continuation\bin\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.pdb
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.csprojAssemblyReference.cache
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.csproj.CoreCompileInputs.cache
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.AssemblyInfoInputs.cache
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.AssemblyInfo.cs
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.dll
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task6.Continuation\obj\Debug\netcoreapp2.1\MultiThreading.Task6.Continuation.pdb

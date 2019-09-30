@@ -31,3 +31,14 @@ F:\Work\Mentoring2019\Multithreading\Mentoring_2019\MultiThreading.Task3.Matrixe
 F:\Work\Mentoring2019\Multithreading\Mentoring_2019\MultiThreading.Task3.Matrixes\obj\Debug\netcoreapp2.1\MultiThreading.Task3.MatrixMultiplier.AssemblyInfo.cs
 F:\Work\Mentoring2019\Multithreading\Mentoring_2019\MultiThreading.Task3.Matrixes\obj\Debug\netcoreapp2.1\MultiThreading.Task3.MatrixMultiplier.dll
 F:\Work\Mentoring2019\Multithreading\Mentoring_2019\MultiThreading.Task3.Matrixes\obj\Debug\netcoreapp2.1\MultiThreading.Task3.MatrixMultiplier.pdb
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task3.Matrixes\bin\Debug\netcoreapp2.1\MultiThreading.Task3.MatrixMultiplier.deps.json
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task3.Matrixes\bin\Debug\netcoreapp2.1\MultiThreading.Task3.MatrixMultiplier.runtimeconfig.json
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task3.Matrixes\bin\Debug\netcoreapp2.1\MultiThreading.Task3.MatrixMultiplier.runtimeconfig.dev.json
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task3.Matrixes\bin\Debug\netcoreapp2.1\MultiThreading.Task3.MatrixMultiplier.dll
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task3.Matrixes\bin\Debug\netcoreapp2.1\MultiThreading.Task3.MatrixMultiplier.pdb
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task3.Matrixes\obj\Debug\netcoreapp2.1\MultiThreading.Task3.MatrixMultiplier.csprojAssemblyReference.cache
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task3.Matrixes\obj\Debug\netcoreapp2.1\MultiThreading.Task3.MatrixMultiplier.csproj.CoreCompileInputs.cache
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task3.Matrixes\obj\Debug\netcoreapp2.1\MultiThreading.Task3.MatrixMultiplier.AssemblyInfoInputs.cache
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task3.Matrixes\obj\Debug\netcoreapp2.1\MultiThreading.Task3.MatrixMultiplier.AssemblyInfo.cs
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task3.Matrixes\obj\Debug\netcoreapp2.1\MultiThreading.Task3.MatrixMultiplier.dll
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task3.Matrixes\obj\Debug\netcoreapp2.1\MultiThreading.Task3.MatrixMultiplier.pdb

@@ -31,3 +31,14 @@ F:\Work\Mentoring2019\Multithreading\Mentoring_2019\MultiThreading.Task4.Threads
 F:\Work\Mentoring2019\Multithreading\Mentoring_2019\MultiThreading.Task4.Threads.Join\obj\Debug\netcoreapp2.1\MultiThreading.Task4.Threads.Join.AssemblyInfo.cs
 F:\Work\Mentoring2019\Multithreading\Mentoring_2019\MultiThreading.Task4.Threads.Join\obj\Debug\netcoreapp2.1\MultiThreading.Task4.Threads.Join.dll
 F:\Work\Mentoring2019\Multithreading\Mentoring_2019\MultiThreading.Task4.Threads.Join\obj\Debug\netcoreapp2.1\MultiThreading.Task4.Threads.Join.pdb
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task4.Threads.Join\bin\Debug\netcoreapp2.1\MultiThreading.Task4.Threads.Join.deps.json
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task4.Threads.Join\bin\Debug\netcoreapp2.1\MultiThreading.Task4.Threads.Join.runtimeconfig.json
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task4.Threads.Join\bin\Debug\netcoreapp2.1\MultiThreading.Task4.Threads.Join.runtimeconfig.dev.json
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task4.Threads.Join\bin\Debug\netcoreapp2.1\MultiThreading.Task4.Threads.Join.dll
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task4.Threads.Join\bin\Debug\netcoreapp2.1\MultiThreading.Task4.Threads.Join.pdb
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task4.Threads.Join\obj\Debug\netcoreapp2.1\MultiThreading.Task4.Threads.Join.csprojAssemblyReference.cache
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task4.Threads.Join\obj\Debug\netcoreapp2.1\MultiThreading.Task4.Threads.Join.csproj.CoreCompileInputs.cache
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task4.Threads.Join\obj\Debug\netcoreapp2.1\MultiThreading.Task4.Threads.Join.AssemblyInfoInputs.cache
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task4.Threads.Join\obj\Debug\netcoreapp2.1\MultiThreading.Task4.Threads.Join.AssemblyInfo.cs
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task4.Threads.Join\obj\Debug\netcoreapp2.1\MultiThreading.Task4.Threads.Join.dll
+D:\Mentoring2019\Mentoring_2019\MultiThreading.Task4.Threads.Join\obj\Debug\netcoreapp2.1\MultiThreading.Task4.Threads.Join.pdb
