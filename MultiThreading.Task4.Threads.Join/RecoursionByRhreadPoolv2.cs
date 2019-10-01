@@ -5,36 +5,41 @@ using System.Threading;
 
 namespace MultiThreading.Task4.Threads.Join
 {
-    internal class RecoursionByThreadPool : IRecoursionWorker
+    internal class RecoursionByRhreadPoolv2 : IRecoursionWorker
     {
-        private SemaphoreSlim sem = new SemaphoreSlim(10, 10);
+        private SemaphoreSlim sem = new SemaphoreSlim(0, 1);
         public void RunRecoursion()
         {
-            var state = 10;
+            ThreadPool.QueueUserWorkItem((t) => {
 
-            ThreadPool.QueueUserWorkItem(new WaitCallback(Recoursion), state);
+                Recoursion(t);
+                sem.Release();
 
-            while (sem.CurrentCount > 0)
-            { }
+            }, 10);
+            sem.Wait();
 
             Console.WriteLine($"All threads from Thread pool did their job.");
             Console.WriteLine("****************************");
-
-            sem.Dispose();
         }
 
         private void Recoursion(object obj)
         {
             var state = (int)obj;
-            if (state <= 0) return;
 
             Console.WriteLine($"Thread:{Thread.CurrentThread.ManagedThreadId} - state:{state}");
 
             state--;
 
-            ThreadPool.QueueUserWorkItem(new WaitCallback(t => { Recoursion(state); }));
+            if (state <= 0) return;
 
-            sem.Wait();
+            var semaphoreSlim = new SemaphoreSlim(0, 1);
+            ThreadPool.QueueUserWorkItem((t) =>
+            {
+                Recoursion(t);
+                semaphoreSlim.Release();
+            }, state);
+
+            semaphoreSlim.Wait();
         }
     }
 }

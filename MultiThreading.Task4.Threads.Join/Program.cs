@@ -31,6 +31,8 @@ namespace MultiThreading.Task4.Threads.Join
 
             //b
             new RecoursionByThreadPool().RunRecoursion();
+            new RecoursionByRhreadPoolv2().RunRecoursion();
+            
             //a
             new RecoursionByThreads().RunRecoursion();
 
