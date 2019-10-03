@@ -41,27 +41,15 @@ namespace MultiThreading.Task6.Continuation
 
         public void TaskC()
         {
-            var task = Task.Run(() =>
-            {
-                Console.WriteLine($"Hello from task c main task with tread {Thread.CurrentThread.ManagedThreadId}");
-                throw new CustomException(":o");
-            });
+            var tcs = new TaskCompletionSource<object>();
+            var task = tcs.Task;
+
+            tcs.SetException(new CustomException("blablabla"));
 
             task.ContinueWith((t) => {
-                if (task.IsFaulted)
-                {
-                    Console.WriteLine($"Hello from continuation task C! with thread {Thread.CurrentThread.ManagedThreadId}");
-                }
-            }, TaskContinuationOptions.ExecuteSynchronously);
-
-            try
-            {
-                task.Wait();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.InnerException);
-            }
+                Console.WriteLine($"Hello from task c main task with thread {Thread.CurrentThread.ManagedThreadId}");
+                Continuation(t);
+            }, TaskContinuationOptions.OnlyOnFaulted | TaskContinuationOptions.ExecuteSynchronously);
         }
 
         public void TaskD()
