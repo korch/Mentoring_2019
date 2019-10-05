@@ -11,65 +11,59 @@ namespace MultiThreading.Task5.Threads.SharedCollection
 
         private AutoResetEvent auto = new AutoResetEvent(false);
         private List<int> _list;
-        private Queue<int> _listToRan = new Queue<int>();
-        private bool _isRunning = true;
-        private Thread _threadForPrinting;
+        private const int Capacity = 10;
+        private bool _isRunning = true; // flag for thread of printing manipulation
 
         public void Run()
         {
             _list = new List<int>(10);
+
+            var threadForPrinting = new Thread(new ThreadStart(PrintCollection));
+            threadForPrinting.Start();
 
             var task = Task.Factory.StartNew(AddItem);
 
             task.Wait();
 
             Console.WriteLine("Press any key to exit...");
-           
-            Console.ReadKey(true);
-           
+
+            auto.Dispose();
+            Console.ReadLine();
         }
 
         private void AddItem()
         {
-            _threadForPrinting = new Thread(new ThreadStart(PrintCollection));
-            _threadForPrinting.Start();
-
-            for (var i = 0; i < 10; i++)
+            for (var i = 0; i < Capacity; i++)
             {
-
                 lock (_list)
                 {
-
                     _list.Add(i);
-                    _listToRan.Enqueue(i);
                     Console.WriteLine("Added element");
+                }
+
+                if (i == Capacity - 1)
+                {
+                    _isRunning = false; // set flag to false after last iteration
                 }
 
                 auto.Set(); //signal for threads that they can run 
 
                 Thread.Sleep(1000);
             }
-
-            _isRunning = false;
-            auto.Close();
         }
 
         private void PrintCollection()
         {
             while (_isRunning)
             {
-                if (_listToRan.Count > 0)
-                {
-                    auto.WaitOne(); // wait a signal from another thread
-                    lock (_list)
-                    {
-                        Console.WriteLine("New print:");
-                        foreach (var item in _list)
-                        {
-                            Console.WriteLine(item);
-                        }
+                auto.WaitOne(); // wait a signal from another thread
 
-                        _listToRan.Dequeue();
+                lock (_list)
+                {
+                    Console.WriteLine("New print:");
+                    foreach (var item in _list)
+                    {
+                        Console.WriteLine(item);
                     }
                 }
             }
