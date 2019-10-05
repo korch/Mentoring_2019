@@ -1,12 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 
 namespace MultiThreading.Task4.Threads.Join
 {
     internal class RecoursionByThreadPool : IRecoursionWorker
     {
+        private IWorkLoad _workLoad;
+
+        public RecoursionByThreadPool(IWorkLoad workLoad)
+        {
+            _workLoad = workLoad;
+        }
+
         private SemaphoreSlim sem = new SemaphoreSlim(10, 10);
         public void RunRecoursion()
         {
@@ -28,13 +33,22 @@ namespace MultiThreading.Task4.Threads.Join
             var state = (int)obj;
             if (state <= 0) return;
 
+            _workLoad.DoWork();
+
             Console.WriteLine($"Thread:{Thread.CurrentThread.ManagedThreadId} - state:{state}");
 
             state--;
 
+            SleepRandomTime();
+
             ThreadPool.QueueUserWorkItem(new WaitCallback(t => { Recoursion(state); }));
 
             sem.Wait();
+        }
+
+        private void SleepRandomTime()
+        {
+            Thread.Sleep(new Random().Next(100, 10000));
         }
     }
 }

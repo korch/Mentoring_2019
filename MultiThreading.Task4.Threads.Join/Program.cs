@@ -29,12 +29,14 @@ namespace MultiThreading.Task4.Threads.Join
 
             // feel free to add your code
 
+            var workLoad = new WorkLoadImitator();
+
             //b
-            new RecoursionByThreadPool().RunRecoursion();
-            new RecoursionByRhreadPoolv2().RunRecoursion();
+            new RecoursionByThreadPool(workLoad).RunRecoursion();
+            new RecoursionByRhreadPoolv2(workLoad).RunRecoursion();
             
             //a
-            new RecoursionByThreads().RunRecoursion();
+            new RecoursionByThreads(workLoad).RunRecoursion();
 
             Console.ReadLine();
         }

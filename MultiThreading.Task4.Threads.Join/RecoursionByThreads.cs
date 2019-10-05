@@ -7,6 +7,13 @@ namespace MultiThreading.Task4.Threads.Join
 {
     internal class RecoursionByThreads : IRecoursionWorker
     {
+        private IWorkLoad _workLoad;
+
+        public RecoursionByThreads(IWorkLoad workLoad)
+        {
+            _workLoad = workLoad;
+        }
+
         public void RunRecoursion()
         {
             var state = 10;
@@ -23,6 +30,8 @@ namespace MultiThreading.Task4.Threads.Join
             var state = (int)obj;
 
             if (state <= 0) return;
+
+            _workLoad.DoWork();
 
             Console.WriteLine($"Thread:{Thread.CurrentThread.ManagedThreadId} - state:{state}");
 

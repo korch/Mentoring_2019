@@ -7,6 +7,13 @@ namespace MultiThreading.Task4.Threads.Join
 {
     internal class RecoursionByRhreadPoolv2 : IRecoursionWorker
     {
+        private IWorkLoad _workLoad;
+
+        public RecoursionByRhreadPoolv2(IWorkLoad workLoad)
+        {
+            _workLoad = workLoad;
+        }
+
         private SemaphoreSlim sem = new SemaphoreSlim(0, 1);
         public void RunRecoursion()
         {
@@ -25,6 +32,8 @@ namespace MultiThreading.Task4.Threads.Join
         private void Recoursion(object obj)
         {
             var state = (int)obj;
+
+            _workLoad.DoWork();
 
             Console.WriteLine($"Thread:{Thread.CurrentThread.ManagedThreadId} - state:{state}");
 
