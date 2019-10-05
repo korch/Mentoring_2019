@@ -8,10 +8,12 @@ namespace MultiThreading.Task5.Threads.SharedCollection
 {
     internal class CollectionWorker
     {
-      
+
         private AutoResetEvent auto = new AutoResetEvent(false);
-   
         private List<int> _list;
+        private Queue<int> _listToRan = new Queue<int>();
+        private bool _isRunning = true;
+        private Thread _threadForPrinting;
 
         public void Run()
         {
@@ -20,38 +22,58 @@ namespace MultiThreading.Task5.Threads.SharedCollection
             var task = Task.Factory.StartNew(AddItem);
 
             task.Wait();
+
+            Console.WriteLine("Press any key to exit...");
+           
+            Console.ReadKey(true);
+           
         }
 
         private void AddItem()
         {
+            _threadForPrinting = new Thread(new ThreadStart(PrintCollection));
+            _threadForPrinting.Start();
+
             for (var i = 0; i < 10; i++)
             {
-                Task.Factory.StartNew(PrintCollection);
 
                 lock (_list)
                 {
-                  
+
                     _list.Add(i);
+                    _listToRan.Enqueue(i);
                     Console.WriteLine("Added element");
-                }  
+                }
+
                 auto.Set(); //signal for threads that they can run 
+
+                Thread.Sleep(1000);
             }
 
+            _isRunning = false;
             auto.Close();
-            
         }
 
         private void PrintCollection()
         {
-            auto.WaitOne(); // wait a signal from another thread
-            Console.WriteLine("New print:");
-            lock (_list)
+            auto.WaitOne();  // wait a signal from another thread
+            while (_isRunning)
             {
-                foreach (var item in _list)
-                {
-                    Console.WriteLine(item);
+                if (_listToRan.Count > 0)
+                {    
+                    lock (_list)
+                    {
+                        Console.WriteLine("New print:");
+                        foreach (var item in _list)
+                        {
+                            Console.WriteLine(item);
+                        }
+
+                        _listToRan.Dequeue();
+                    }
                 }
-            } 
+            }
         }
     }
 }
+
