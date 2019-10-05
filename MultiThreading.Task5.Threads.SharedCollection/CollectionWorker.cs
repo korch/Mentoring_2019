@@ -56,11 +56,11 @@ namespace MultiThreading.Task5.Threads.SharedCollection
 
         private void PrintCollection()
         {
-            auto.WaitOne();  // wait a signal from another thread
             while (_isRunning)
             {
                 if (_listToRan.Count > 0)
-                {    
+                {
+                    auto.WaitOne(); // wait a signal from another thread
                     lock (_list)
                     {
                         Console.WriteLine("New print:");
