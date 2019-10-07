@@ -14,20 +14,24 @@ namespace MultiThreading.Task5.Threads.SharedCollection
         private const int Capacity = 10;
         private bool _isRunning = true; // flag for thread of printing manipulation
 
+        private object _lockObj = new object();
+
         public void Run()
         {
             _list = new List<int>(10);
 
-            var threadForPrinting = new Thread(new ThreadStart(PrintCollection));
-            threadForPrinting.Start();
+            //var threadForPrinting = new Thread(new ThreadStart(PrintCollection));
+            //threadForPrinting.Start();
 
-            var task = Task.Factory.StartNew(AddItem);
+            //var task = Task.Factory.StartNew(AddItem);
 
-            task.Wait();
+            //task.Wait();
+
+            AddItemV2();
 
             Console.WriteLine("Press any key to exit...");
 
-            auto.Dispose();
+            //auto.Dispose();
             Console.ReadLine();
         }
 
@@ -50,6 +54,31 @@ namespace MultiThreading.Task5.Threads.SharedCollection
 
                 Thread.Sleep(1000);
             }
+        }
+
+        private void AddItemV2()
+        {
+            var tasks = new List<Task>();
+
+            for (int i = 0; i <= Capacity; i++)
+            {
+                var tempI = i;
+                var task = Task.Factory.StartNew(() => {
+                    lock (_lockObj)
+                    {
+                        _list.Add(tempI);
+                        PrintCollectionV2(tempI);
+                    }
+                });
+                tasks.Add(task);
+            }
+
+            Task.WaitAll(tasks.ToArray());
+        }
+
+        private void PrintCollectionV2(int elementsCount)
+        {
+            Console.WriteLine($"Array (when {elementsCount} have been added): {String.Join(", ", _list.ToArray())}");
         }
 
         private void PrintCollection()
